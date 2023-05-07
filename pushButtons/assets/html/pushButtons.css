@@ -1,0 +1,596 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+    font: 12px sans-serif;
+    overflow: hidden;
+}
+
+.with-border {
+  position:absolute;
+  top:10px;
+  left: 10px;
+  width: 160px;
+  height: 465px;
+  border-width: thin;
+  border-style: inset;
+  border-color: black;
+  background-color: white;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.buttons-manage {
+  position: absolute;
+  top: 445px;
+  right: 20px;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.tabs {
+  position:absolute;
+  top:10px;
+  left: 180px;
+  height: 50px;
+  width: 530px;
+}
+
+
+.color-blue {
+  position:relative;
+  text-align: center;
+  font-family: "Lucida Grande";
+  font-size: 22px;
+  color: #33BEFF;
+  top: 100px;
+  left: 10px;
+}
+
+.label {
+  text-align: left;
+  position: absolute;
+  font-family: "Lucida Grande";
+  font-size: 15px;
+}
+
+.label-min {
+  text-align: left;
+  position: absolute;
+  font-family: "Lucida Grande";
+  font-size: 12px;
+  color: black;
+}
+
+.color-min {
+  color: #7A7979;
+}
+
+.color-max {
+  color: black;
+}
+
+.infos {
+  position:absolute;
+  top:65px;
+  left: 170px;
+  width: 550px;
+  height: 365px;
+}
+
+.translate-rule-label {
+  font-size: 12px;
+}
+
+.div-macros {
+  position:absolute;
+  top: 160px;
+  left: 0px;
+  width: 550px;
+  height: 50px;
+}
+#div-macro2{
+  display: none;
+}
+
+#labelColorDescriptionNone{
+  color:"red";
+}
+
+.noplugin {
+  position:absolute;
+  height: 15px;
+  width: 250px;
+  max-width: 250px;
+  font-size: 12px;
+  color: red;
+  display: none;
+}
+
+.div-image {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  font-family: "Lucida Grande";
+  font-size: 15px;
+  color: black;
+  display: none;
+}
+
+.div-image-DescriptionNone {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  font-family: "Lucida Grande";
+  font-size: 15px;
+  color: red;
+
+  display: none;
+}
+
+.cy-image {
+  margin: 0 0 0 0;
+  height: 60px;
+  position: left;
+  width: 60px;
+  position: absolute;
+}
+
+#cy-imageOn {
+  top: 55px;
+  left: 60px;
+}
+
+#cy-imageOff {
+  top: 55px;
+  left: 220px;
+}
+
+#cy-imageOther {
+  top: 55px;
+  left: 380px;
+}
+
+.labelOnOff {
+  text-align: left;
+  position: absolute;
+  font-family: "Lucida Grande";
+  font-size: 12px;
+  color: black;
+}
+
+#labelOff {
+  top: 120px;
+  left: 240px;
+}
+
+#labelOn {
+  top: 120px;
+  left: 80px;
+}
+
+#labelOther {
+  top: 120px;
+  left: 395px;
+}
+
+#label-size-button {
+  top: 175px;
+  left: 10px;
+}
+#size-button {
+  position:absolute;
+  top: 175px;
+  left:160px;
+  height: 20px;
+  width: 90px;
+}
+
+#label-size-button-text {
+  top: 175px;
+  left: 280px;
+}
+#size-button-text {
+  position:absolute;
+  top: 175px;
+  left:410px;
+  height: 20px;
+  width: 90px;
+}
+
+#label-color-text {
+  top: 200px;
+  left: 280px;
+}
+#label-color-bgrcolor {
+  position:absolute;
+  top: 200px;
+  left: 410px;
+  width : 15px;
+  height: 15px;
+}
+
+#label-pos-text {
+  top: 225px;
+  left: 280px;
+}
+#menu-pos-text {
+  position:absolute;
+  top: 225px;
+  left: 410px;
+  width: 90px;
+  max-width: 90px;
+  font-size: 12px;
+}
+#pos-text{
+  position:absolute;
+  top: 222px;
+  left: 410px;
+  height: 20px;
+  width: 90px;
+  max-width: 90px;
+  font-size: 12px;
+}
+
+#label-marginY-text {
+  top: 275px;
+  left: 10px;
+}
+#marginY-text {
+  position:absolute;
+  top: 275px;
+  left:160px;
+  height: 20px;
+  width: 90px;
+}
+
+#div-text-label{
+  top: 150px;
+  left: 350px;
+}
+
+#div-text-bouton{
+  top: 150px;
+  left: 110px;
+}
+
+
+#label-ombre-text {
+  top: 250px;
+  left: 280px;
+}
+#ombre-text {
+  position:absolute;
+  top: 250px;
+  left:410px;
+  height: 20px;
+  width: 90px;
+}
+
+#label-color-ombre-text {
+  top: 275px;
+  left: 280px;
+}
+#ombre-text-bgrcolor {
+  position:absolute;
+  top: 275px;
+  left: 410px;
+  width : 15px;
+  height: 15px;
+}
+
+#label-color-node {
+  top: 225px;
+  left: 10px;
+}
+#color-node-bgrcolor {
+  position:absolute;
+  top: 225px;
+  left: 160px;
+  width : 15px;
+  height: 15px;
+}
+
+
+#label-size-border-node {
+  top: 200px;
+  left: 10px;
+}
+#size-border-node {
+  position:absolute;
+  top: 200px;
+  left:160px;
+  height: 20px;
+  width: 90px;
+}
+
+#label-opacity {
+  top: 250px;
+  left: 10px;
+}
+#opacity {
+  position:absolute;
+  top: 250px;
+  left:160px;
+  height: 20px;
+  width: 60px;
+}
+
+.cy {
+  margin: 0 0 0 0;
+  float: center;
+  width: inherit;
+  height: inherit;
+  position: left;
+  cursor: pointer;
+}
+
+.labelplugin {
+  top: 10px;
+  left: 10px;
+}
+.plugin {
+  position:inherit;
+  top: 25px;
+  left: 10px;
+  height: 25px;
+  width: 170px;
+  max-width: 200px;
+  font-size: 12px;
+}
+.menu-plugin {
+  position:relative;
+  width: 180px;
+  max-width: 180px;
+  font-size: 12px;
+}
+
+.labelkey {
+  top: 10px;
+  left: 200px;
+  width: 300px;
+}
+.key {
+  top: 25px;
+  left: 190px;
+  height: 25px;
+  max-width: 260px;
+}
+.testKey {
+  position: absolute;
+  top: 25px;
+  left: 460px;
+  min-height: 25px;
+  min-width: 60px;
+  text-transform: none;
+}
+
+.onoff {
+  text-transform: none;
+}
+
+.div-circulaire {
+  position:absolute;
+  top: 210px;
+  left: 0px;
+  width: 550px;
+  height: 140px;
+}
+#circulaire-label1 {
+  top: 10px;
+  left: 10px;
+}
+
+#circulaire-label2 {
+  top: 25px;
+  left: 10px;
+}
+
+#circulaire-label3 {
+  top: 50px;
+  left: 10px;
+}
+
+#circular-menus{
+  position:absolute;
+  width: 530px;
+  left: 10px;
+  height: 25px;
+  top: 75px;
+  background: "#009788";
+  overflow: auto;
+  padding: 0 0px;
+}
+
+
+.circular-menu[selected], .circular-menu:focus {
+    color: blanchedalmond;
+}
+
+.circular-menu{
+  min-height: 25px;
+  padding: 0 5px;
+}
+
+#div-circular {
+  position:absolute;
+  top: 300px;
+  left: 0px;
+  width : 550px;
+  height: 80px;
+}
+
+#label-div {
+  top: 5px;
+  left: 210px;
+}
+
+#label-circular-bgrcolor {
+  top: 30px;
+  left: 10px;
+}
+#circular-bgrcolor {
+  position:absolute;
+  top: 32px;
+  left: 145px;
+  width : 15px;
+  height: 15px;
+}
+
+#label-circular-selectcolor {
+  top: 55px;
+  left: 10px;
+}
+#circular-selectcolor {
+  position:absolute;
+  top: 55px;
+  left:145px;
+  width : 15px;
+  height: 15px;
+}
+
+#label-circular-bgrtextcolor {
+  top: 30px;
+  left: 185px;
+}
+#circular-bgrtextcolor {
+  position:absolute;
+  top: 32px;
+  left: 305px;
+  width : 15px;
+  height: 15px;
+}
+
+#label-circular-radius {
+  top: 55px;
+  left: 185px;
+}
+#circular-radius {
+  position:absolute;
+  top: 55px;
+  left:305px;
+  height: 20px;
+  width: 60px;
+}
+
+#label-circular-text {
+  top: 30px;
+  left: 340px;
+}
+#circular-text {
+  position:absolute;
+  top: 30px;
+  left:455px;
+  height: 20px;
+  width: 60px;
+}
+
+
+.term-label {
+  text-transform: none;
+  font-size: 12px;
+}
+
+#button-name-menu {
+  position:absolute;
+  max-width : 280px;
+  max-height : 25px;
+  top:45px;
+  left: 165px;
+  font-size: 12px;
+}
+
+#add-circular-menu {
+  position: absolute;
+  top: 45px;
+  left: 340px;
+  min-height: 25px;
+  min-width: 60px;
+  text-transform: none;
+}
+
+#delete-circular-menu {
+  position: absolute;
+  top: 45px;
+  left: 425px;
+  min-height: 25px;
+  min-width: 60px;
+  text-transform: none;
+}
+
+
+#div-macro-menu {
+  position:absolute;
+  top: 95px;
+  left: 0px;
+  width: 550px;
+  height: 50px;
+}
+
+
+#macrosOnOff-label1 {
+  top: 75px;
+  left: 10px;
+}
+
+#macrosOnOff-label2 {
+  top: 90px;
+  left: 10px;
+}
+
+#macrosOnOff-label3 {
+  top: 105px;
+  left: 10px;
+}
+
+#macrosOnOff-list {
+  position:absolute;
+  height: 40px;
+  top: 120px;
+  left: 10px;
+  overflow-y: auto;
+}
+
+#button-label {
+  top: 10px;
+  left: 10px;
+}
+
+#button-name {
+  position:absolute;
+  max-width : 280px;
+  top:0px;
+  left: 50px;
+  width : 250px;
+}
+
+#text-hidden {
+  position:absolute;
+  top:40px;
+  left:10px;
+}
+
+#label-hidden {
+  top: 43px;
+  left: 50px;
+}
+
+#div-regles {
+  position:absolute;
+  top: 5px;
+  left: 0px;
+  width: 550px;
+  height: 365px;
+  visibility: hidden;
+}
+
+#iconTab {
+  display: none;
+}

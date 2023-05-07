@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./node_modules/xel/themes/material.css"/>
+    <script src="./node_modules/xel/xel.min.js"></script>
+    <link rel="stylesheet" href="node_modules/jstree/dist/themes/default/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="./pushButtons.css">
+  </head>
+  <body>
+    <div id="jstree-border" class='with-border'>
+      <div id="jstree"></div>
+    </div>
+    <x-tabs class='tabs' skin="compact" centered>
+      <x-tab id='settings' class="buttonTab active" selected>
+        <x-icon name="settings-applications"></x-icon>
+        <x-label>Paramètres et Actions</x-label>
+      </x-tab>
+      <x-tab id='icon' class="buttonTab">
+        <x-icon name="image"></x-icon>
+        <x-label>Images et Couleurs</x-label>
+      </x-tab>
+    </x-tabs>
+
+    <div id="settingsTab" class="infos">
+      <x-label class="color-blue" id="label-has-rule">Sélectionnez ou crééz un bouton</x-label>
+
+      <div id="div-regles">
+        <label id="button-label" class="label">Label:</label>
+        <x-input id="button-name"></x-input>
+        <x-checkbox id="text-hidden" size="smaller"></x-checkbox>
+        <x-label id="label-hidden" class="label">Le label apparait sous du bouton</x-label>
+        <label id="macrosOnOff-label1" class="label-min color-min">Choisissez les macros à exécuter pour les actions On et Off.</label>
+        <label id="macrosOnOff-label2" class="label-min color-min">Off est optionnel, si vous ne définissez pas d'action Off l'action On sera toujours exécutée.</label>
+        <label id="macrosOnOff-label3" class="label-min color-min">Laissez vide si vous ne voulez qu'un menu circulaire.</label>
+        <x-buttons id="macrosOnOff-list" tracking="1">
+          <x-button id="macrosOnOff1" class="onoff" toggled=true>
+            <x-label>Click On</x-label>
+          </x-button>
+          <x-button id="macrosOnOff2" class="onoff">
+            <x-label>Click Off</x-label>
+          </x-button>
+        </x-buttons>
+        <div id="div-macro1" class="div-macros">
+            <x-label class="label-min labelplugin" id="labelplugin1">Plugin</x-label>
+            <x-select id="plugin1" class="plugin">
+              <x-menu id="menu-plugin1" class="menu-plugin">
+                <x-menuitem value="Sélectionnez un plugin" id="plugin-selection1" toggled><x-label class="small_size">Sélectionnez un plugin</x-label></x-menuitem>
+                <hr>
+              </x-menu>
+            </x-select>
+            <x-label id="noplugin1" class="noplugin labelplugin"></x-label>
+
+            <x-label class="label-min labelkey" id="labelkey1">Paramètres d'exécution</x-label>
+            <x-input id="key1" class="key">
+              <x-label id="key1label"><b>command=</b><i>action</i><b>~</b><i>param1</i><b>=</b><i>value1</i><b>~</b><i>param2</i><b>=</b><i>value2</i></x-label>
+            </x-input>
+            <x-button id="testKey1" class="testKey">
+              <x-label>Tester</x-label>
+            </x-button>
+        </div>
+        <div id="div-macro2" class="div-macros">
+          <x-label class="label-min labelplugin" id="labelplugin2" class="labelplugin">Plugin</x-label>
+          <x-select id="plugin2" class="plugin">
+            <x-menu id="menu-plugin2" class="menu-plugin">
+              <x-menuitem value="Sélectionnez un plugin" id="plugin-selection2" toggled><x-label class="small_size">Sélectionnez un plugin</x-label></x-menuitem>
+              <hr>
+            </x-menu>
+          </x-select>
+          <x-label id="noplugin2" class="noplugin labelplugin"></x-label>
+
+          <x-label class="label-min labelkey" id="labelkey2">Paramètres d'exécution</x-label>
+          <x-input id="key2" class="key">
+              <x-label><b>command=</b><i>action</i><b>~</b><i>param1</i><b>=</b><i>value1</i><b>~</b><i>param2</i><b>=</b><i>value2</i></x-label>
+          </x-input>
+          <x-button id="testKey2" class="testKey">
+            <x-label>Tester</x-label>
+          </x-button>
+        </div>
+        <div id="div-circulaire" class="div-circulaire">
+          <label id="circulaire-label1" class="label-min color-min">Entrez les labels et les macros associées si vous voulez un menu circulaire (Optionel).</label>
+          <label id="circulaire-label2" class="label-min color-min">Si un interrupteur On/Off est défini alors <b>un double click</b> le fait apparaitre sinon <b>un seul click</b> suffit.</label>
+
+          <label id="circulaire-label3" class="label">label de menu circulaire:</label>
+          <x-input id="button-name-menu"></x-input>
+          <x-button id="add-circular-menu">
+            <x-label>Ajouter</x-label>
+          </x-button>
+          <x-button id="delete-circular-menu">
+            <x-label>Supprimer</x-label>
+          </x-button>
+
+          <x-tabs id="circular-menus"></x-tabs>
+          <div id="div-macro-menu">
+              <x-label class="label-min labelplugin" id="labelplugin3">Plugin</x-label>
+              <x-select id="plugin3" class="plugin">
+                <x-menu id="menu-plugin3" class="menu-plugin">
+                  <x-menuitem value="Sélectionnez un plugin" id="plugin-selection3" toggled><x-label class="small_size">Sélectionnez un plugin</x-label></x-menuitem>
+                  <hr>
+                </x-menu>
+              </x-select>
+              <x-label id="noplugin3" class="noplugin labelplugin"></x-label>
+
+              <x-label class="label-min labelkey" id="labelkey3">Paramètres d'exécution</x-label>
+              <x-input id="key3" class="key">
+                  <x-label><b>command=</b><i>action</i><b>~</b><i>param1</i><b>=</b><i>value1</i><b>~</b><i>param2</i><b>=</b><i>value2</i></x-label>
+              </x-input>
+              <x-button id="testKey3" class="testKey">
+                <x-label>Tester</x-label>
+              </x-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="iconTab" class="infos">
+      <x-box>
+        <div class="div-image-DescriptionNone" id="labelDescriptionNone">
+          <x-label>Définissez d'abord une valeur On, Off et/ou un menu circulaire au bouton dans l'onglet paramètres avant d'associer des images</x-label>
+        </div>
+        <div class="div-image" id="labelDescriptionOn">
+          <x-label>Choisissez une image On pour ce bouton:</x-label>
+        </div>
+        <div class="div-image" id="labelDescriptionOnOff">
+          <x-label>Choisissez une image On et une image Off pour ce bouton:</x-label>
+        </div>
+        <div class="div-image" id="labelDescriptionOnOther">
+          <x-label>Choisissez une image On et une image Autre qui apparaitra dans le menu circulaire après un double-click:</x-label>
+        </div>
+        <div class="div-image" id="labelDescriptionOnOffOther">
+          <x-label>Choisissez une image On, une image Off et une image Autre qui apparaitra dans le menu circulaire après un double-click:</x-label>
+        </div>
+        <div class="div-image" id="labelDescriptionOther">
+          <x-label>Choisissez une image Autre qui apparaitra dans le menu circulaire après un click:</x-label>
+        </div>
+        <div class="cy-image" id="cy-imageOn">
+            <div class="cy" id="cy-On"></div>
+        </div>
+        <div class="cy-image" id="cy-imageOff">
+            <div class="cy" id="cy-Off"></div>
+        </div>
+        <div class="cy-image" id="cy-imageOther">
+            <div class="cy" id="cy-Other"></div>
+        </div>
+      </x-box>
+      <x-label class="labelOnOff" id="labelOn">On</x-label>
+      <x-label class="labelOnOff" id="labelOff">Off</x-label>
+      <x-label class="labelOnOff" id="labelOther">Autre</x-label>
+
+      <label id="div-text-bouton" class="label"><b>Bouton:</b></label>
+
+      <label id="label-size-button" class="label">Diamètre du bouton:</label>
+      <x-numberinput id="size-button" value="40"  min="20" max="100" step="1">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="label-color-node" class="label">Couleur du surlignage:</label>
+      <x-colorselect id="color-node-bgrcolor" value="red">
+        <x-popover style="--align: top;" modal>
+          <x-wheelcolorpicker id="color-node-bgrcolor-picker" value="red"></x-wheelcolorpicker>
+        </x-popover>
+      </x-colorselect>
+
+      <label id="label-size-border-node" class="label">Diamètre du surlignage:</label>
+      <x-numberinput id="size-border-node" value="0"  min="0" max="20" step="1" suffix="px">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="label-opacity" class="label">Opacité du surlignage:</label>
+      <x-numberinput id="opacity" value="0.7"  min="0" max="1" step="0.1">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="label-size-button-text" class="label">Taille de la police:</label>
+      <x-numberinput id="size-button-text" value="12"  min="8" max="20" step="1" suffix="px">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="label-color-text" class="label">Couleur du label:</label>
+      <x-colorselect id="label-color-bgrcolor" value="white">
+        <x-popover style="--align: top;" modal>
+          <x-wheelcolorpicker id="label-color-bgrcolor-picker" value="white"></x-wheelcolorpicker>
+        </x-popover>
+      </x-colorselect>
+
+      <label id="label-pos-text" class="label">Position du label:</label>
+      <x-select id="pos-text">
+        <x-menu id="menu-pos-text">
+          <x-menuitem id="pos-text-top" value="top">
+            <x-label class="small_size">Top</x-label>
+          </x-menuitem>
+          <x-menuitem id="pos-text-center" value="center">
+            <x-label class="small_size">Center</x-label>
+          </x-menuitem>
+          <x-menuitem id="pos-text-bottom" value="bottom" toggled>
+            <x-label class="small_size">Bottom</x-label>
+          </x-menuitem>
+        </x-menu>
+      </x-select>
+
+      <label id="label-marginY-text" class="label">Espace Bouton/Label:</label>
+      <x-numberinput id="marginY-text" value="5"  min="-20" max="20" step="1" suffix="px">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="div-text-label" class="label"><b>Label de bouton:</b></label>
+
+      <label id="label-ombre-text" class="label">Ombre de la police:</label>
+      <x-numberinput id="ombre-text" value="3"  min="0" max="15" step="1" suffix="px">
+        <x-stepper></x-stepper>
+      </x-numberinput>
+
+      <label id="label-color-ombre-text" class="label">Couleur de l'ombre:</label>
+      <x-colorselect id="ombre-text-bgrcolor" value="gray">
+        <x-popover style="--align: top;" modal>
+          <x-wheelcolorpicker id="ombre-text-bgrcolor-picker" value="gray"></x-wheelcolorpicker>
+        </x-popover>
+      </x-colorselect>
+
+      <div id="div-circular">
+        <label id="label-div" class="label"><b>Menu circulaire:</b></label>
+        <label id="label-circular-bgrcolor" class="label">Couleur de fond:</label>
+        <x-colorselect id="circular-bgrcolor" value="gray">
+          <x-popover style="--align: top;" modal>
+            <x-wheelcolorpicker id="circular-bgrcolor-picker" value="gray"></x-wheelcolorpicker>
+          </x-popover>
+        </x-colorselect>
+        <label id="label-circular-selectcolor" class="label">Couleur de sélection:</label>
+        <x-colorselect id="circular-selectcolor" value="green">
+          <x-popover style="--align: top;" modal>
+            <x-wheelcolorpicker id="circular-selectcolor-picker" value="green"></x-wheelcolorpicker>
+          </x-popover>
+        </x-colorselect>
+        <label id="label-circular-bgrtextcolor" class="label">Couleur du texte:</label>
+        <x-colorselect id="circular-bgrtextcolor" value="white">
+          <x-popover style="--align: top;" modal>
+            <x-wheelcolorpicker id="circular-bgrtextcolor-picker" value="white"></x-wheelcolorpicker>
+          </x-popover>
+        </x-colorselect>
+        <label id="label-circular-radius" class="label">Diamètre du menu:</label>
+        <x-numberinput id="circular-radius" value="80"  min="30" max="150" step="1">
+          <x-stepper></x-stepper>
+        </x-numberinput>
+        <label id="label-circular-text" class="label">Taille de la police:</label>
+        <x-numberinput id="circular-text" value="12"  min="8" max="20" step="1" suffix="px">
+          <x-stepper></x-stepper>
+        </x-numberinput>
+      </div>
+    </div>
+
+    <x-buttons tracking="-1" class='buttons-manage'>
+      <x-box horizontal>
+         <x-button id="createPushButton" skin="nav">
+           <x-box>
+             <x-icon  name="build"></x-icon>
+             <x-label>Créer</x-label>
+           </x-box>
+         </x-button>
+        <x-button id="savePushButton" skin="nav">
+          <x-box>
+            <x-icon  name="save"></x-icon>
+            <x-label>Sauvegarder</x-label>
+          </x-box>
+        </x-button>
+        <x-button id="deletePushButton" skin="nav">
+          <x-box>
+            <x-icon  name="delete"></x-icon>
+            <x-label>Supprimer</x-label>
+          </x-box>
+        </x-button>
+        <x-button id="exit" skin="nav">
+          <x-box>
+            <x-icon name="close"></x-icon>
+            <x-label>Fermer</x-label>
+          </x-box>
+        </x-button>
+      </x-box>
+    </x-buttons>
+    <x-notification id="notification"></x-notification>
+    <script>
+        require('./pushButtons.js');
+    </script>
+  </body>
+</html>

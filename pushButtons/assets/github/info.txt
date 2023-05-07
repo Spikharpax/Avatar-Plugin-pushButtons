@@ -1,0 +1,9 @@
+Créez des boutons dans l'interface A.V.A.T.A.R facilement avec ce plugin sans aucun développement!
+
+Plusieurs possibilités de bouton:
+- Bouton On (un clic = une action)
+- Bouton interrupteur On/Off ((un clic = On, un clic = Off)
+- Bouton menu circulaire((un clic fait apparaître le menu circulaire et X actions)
+- Bouton On et menu circulaire (un clic = une action, un double-clic fait apparaître le menu circulaire avec X actions)
+- Bouton interrupteur On/Off et menu circulaire
+

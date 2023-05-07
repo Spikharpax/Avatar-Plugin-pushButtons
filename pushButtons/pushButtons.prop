@@ -1,0 +1,1 @@
+{"modules":{"pushButtons":{"version":"1.0","name":"Push buttons","node":{"label":false},"button":{"latency":1000,"menu":{"doubleClickTime":1.5,"timeOut":7}},"active":true}}}

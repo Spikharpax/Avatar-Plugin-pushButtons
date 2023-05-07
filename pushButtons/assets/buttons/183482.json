@@ -1,0 +1,68 @@
+{
+  "class": "pushOn&circularButton",
+  "click_values": [
+    {
+      "action": "",
+      "name": "On",
+      "plugin": "CurrentTime"
+    },
+    {
+      "action": "",
+      "name": "Off",
+      "plugin": ""
+    }
+  ],
+  "dblclick_values": [
+    {
+      "action": "command=set~value=mute~client=Salon",
+      "name": "mute",
+      "plugin": "SonosSound",
+      "position": 1
+    },
+    {
+      "action": "command=set~value=30~client=Salon",
+      "name": "10",
+      "plugin": "SonosSound",
+      "position": 2
+    },
+    {
+      "action": "command=set~value=30~client=Salon",
+      "name": "20",
+      "plugin": "SonosSound"
+    }
+  ],
+  "id": "183482",
+  "ignored": false,
+  "locked": false,
+  "position": {
+    "x": 100,
+    "y": 100
+  },
+  "selected": false,
+  "style": {
+    "border-color": "red",
+    "border-opacity": 0.7,
+    "border-width": "0px",
+    "click_values": {
+      "background-image-On": "C:\\Apps\\electron\\Avatar-dev\\resources\\core\\plugins\\pushButtons\\assets\\buttons\\images\\defaultButton.png"
+    },
+    "color": "white",
+    "dblclick_values": {
+      "activeFillColor": "green",
+      "background-image": "C:\\Apps\\electron\\Avatar-dev\\resources\\core\\plugins\\pushButtons\\assets\\buttons\\images\\defaultButton.png",
+      "fillColor": "gray",
+      "font": "12px",
+      "itemColor": "white",
+      "menuRadius": 80
+    },
+    "font-size": "12px",
+    "height": 40,
+    "text-hidden": true,
+    "text-margin-y": "5px",
+    "text-outline-color": "gray",
+    "text-outline-width": "3px",
+    "text-valign": "bottom",
+    "width": 40
+  },
+  "title": "SetSound"
+}
