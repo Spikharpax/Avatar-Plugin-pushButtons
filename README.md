@@ -36,4 +36,4 @@ Ce plug-in vous permet de créer des boutons dans l'interface A.V.A.T.A.R facile
 ## ★ License
 Logiciel libre sous [licence MIT](https://github.com/Spikharpax/A.V.A.T.A.R/blob/master/LICENSE)
 
-Copyright (c) 2020 A.V.A.T.A.R - Stéphane Bascher
+Copyright (c) 2023 A.V.A.T.A.R - Stéphane Bascher
